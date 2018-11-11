@@ -1,0 +1,27 @@
+import textwrap
+from collections import OrderedDict
+
+
+
+def merge_the_tools(string, number):
+    wordsList = list(textwrap.wrap(string,number))
+    for word in wordsList:
+        t = word
+        #print t
+        MakeDic(t)
+
+
+def MakeDic(string):
+    l = []
+    for letter in string:
+        l.append([letter,1])
+    OrderedDic(l)
+
+def OrderedDic(list):
+    ordered_dic = OrderedDict(list)
+    #print "ordered dictionary = "
+    result = ""
+    for key in ordered_dic:
+        result += str(key)
+    print result
+
